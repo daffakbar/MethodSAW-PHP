@@ -13,8 +13,8 @@ $kriteria[] = 'C5';
 $w = array(0.3, 0.25, 0.1, 0.3, 0.05);
 
 $alternatifs[] = array('Ibrahim', 5, 7.5, 6, 2.5, 5);
-$alternatifs[] = array('Ika', 2.5, 5, 4, 5, 7.5);
 $alternatifs[] = array('Rina', 7.5, 5, 2, 10, 10);
+$alternatifs[] = array('Ika', 2.5, 5, 4, 5, 7.5);
 $alternatifs[] = array('Dito', 10, 2.5, 8, 7.5, 10);
 
 $index_alternatif = 0;
@@ -53,6 +53,10 @@ foreach ($alternatifs as $alternatif) {
 echo "<pre>";
 print_r($nilai_v);
 echo "</pre>";
+
+usort($nilai_v, function($a,$b){
+    return $a['nilai'] <=> $b['nilai'];
+});
 
 $rank = 1;
 echo "<h4>Rekomendasi penerimaan beasiswa</h4>";
