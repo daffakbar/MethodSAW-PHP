@@ -83,41 +83,41 @@ setiap alternatif diberikan variable untuk masing - masing kriteria sesuai keada
 | Rina. | 7.5 | 5 | 2 | 10 | 10 |
 | Dito. | 10 | 2.5 | 8 | 7.5 | 10 |
 
-kemudian dari tabel di atas dilakukan normalisasi sebagai berikut :\
+kemudian dari tabel di atas dilakukan normalisasi sebagai berikut :
 1. Benefit\
-    Rij = Xij / Max(Xij)\
+    Rij = Xij / Max(Xij)
 2. Cost\
     Rij = Min(Xij) / Xij
 
 Rij = nilai rating ternormalisasi\
 Max = nilai maksismum dari setiap baris dan kolom\
 Min = nilai Minimum dari setiap baris dan kolom\
-Xij = baris dan kolom dari matriks\
+Xij = baris dan kolom dari matriks
 
 Contoh: \
 Benefit\
 R11 = 5 / max{5,2.5,7.5,10} \
 R11 = 5 / 10\
-R11 = 0.5\
+R11 = 0.5
 
 Cost\
 R21 = Min{7.5,5,5,2.5} / 7.5\
 R21 = 2.5 / 7.5\
 R21 = 2.5 / 7.5\
-R21 = 0.33\
+R21 = 0.33
 
 Berikut hasilnya :\
 ![picture](img/1.PNG)
 
 selanjutnya akan dilakukan perhitungan untuk mencari nilai akhir dengan melakukan perkalian bobot kriteria dan matriks R yang telah ternormalisasi
 
-Contoh: 
-A1 = C1 x R11 + C2 x R12 + C3 x R13+ C4 x R14 + C5 x R15
-A1 = 0.3 x 0.5 + 0.25 x 0.33 + 0.1 x 0.75 + 0.3 x 0.25 + 0.05 x 0.5
+Contoh:\
+A1 = C1 x R11 + C2 x R12 + C3 x R13+ C4 x R14 + C5 x R15\
+A1 = 0.3 x 0.5 + 0.25 x 0.33 + 0.1 x 0.75 + 0.3 x 0.25 + 0.05 x 0.5\
 A1 = 0,4075
 
-Berikut hasilnya: 
-![picture](img/2.PNG)
+Berikut hasilnya: \
+![picture](img/2.PNG)\
 jadi berikut adalah hasil perhitungan rekomendasi mahasiswa yangv layak mendapatkan beasiswa :
 
 ![picture](img/3.PNG)
